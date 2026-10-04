@@ -25,27 +25,27 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 25px;
+            padding-bottom: 30px;
         }
 
         .logo {
-            max-width: 120px;
+            max-width: 320px; /* Scaled up for high visibility */
             height: auto;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 0 8px var(--accent-glow));
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 12px var(--accent-glow));
         }
 
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin: 0 0 10px 0;
             letter-spacing: -0.5px;
             color: #ffffff;
@@ -53,47 +53,63 @@
 
         .tagline {
             color: var(--text-muted);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-top: 0;
             color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .badge {
             background-color: rgba(56, 176, 0, 0.2);
             color: var(--accent-green);
             font-size: 0.75rem;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 1px solid rgba(56, 176, 0, 0.4);
+            font-weight: 600;
+        }
+
+        .product-image-container {
+            text-align: center;
+            margin: 25px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
         }
 
         .hardware-details {
-            margin-top: 20px;
+            margin-top: 25px;
             display: grid;
-            gap: 15px;
+            gap: 18px;
         }
 
         .feature-item {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 18px;
             border-radius: 8px;
             border-left: 3px solid var(--accent-green);
         }
@@ -101,30 +117,8 @@
         .feature-title {
             font-weight: bold;
             color: #ffffff;
-            margin-bottom: 5px;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 220px;
-            background: #1a2825;
-            border: 2px dashed var(--border-color);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            margin: 20px 0;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .image-placeholder span {
-            font-size: 0.9rem;
-            color: var(--accent-green);
-            margin-top: 5px;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
         }
 
         .contact-section {
@@ -132,7 +126,7 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 30px;
+            padding: 35px;
         }
 
         .btn {
@@ -140,10 +134,11 @@
             background-color: var(--accent-green);
             color: #0b0f0e;
             font-weight: bold;
-            padding: 12px 28px;
+            padding: 14px 30px;
             border-radius: 6px;
             text-decoration: none;
             margin-top: 15px;
+            font-size: 1.05rem;
             transition: opacity 0.2s;
         }
 
@@ -153,9 +148,9 @@
 
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 45px;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -163,7 +158,7 @@
 
     <div class="container">
         <header>
-            <!-- Upload your logo file as 'logo.png' in your GitHub repository -->
+            <!-- Official Company Logo -->
             <img src="logo.png" alt="Amelia Hydro Dynamics Logo" class="logo" onerror="this.style.display='none'">
             <h1>Amelia Hydro Dynamics</h1>
             <div class="tagline">Fernandina Beach, Florida | Smart Fertigation Hardware & Agronomy Consulting</div>
@@ -171,46 +166,55 @@
 
         <!-- Smart Fertigation Hardware Section -->
         <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                <h2>Smart Fertigation Hardware</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+                <h2 style="margin: 0;">Smart Fertigation Hardware Ecosystem</h2>
                 <span class="badge">Patent-Pending</span>
             </div>
-            <p>Bringing commercial-grade precision horticulture down to the residential scale. Our automated ecosystem delivers exact, zone-specific treatments seamlessly during normal watering cycles without complexity or waste.</p>
             
-            <!-- Product image slot -->
-            <div class="image-placeholder">
-                <strong>Smart Delivery Ecosystem</strong>
-                <span>[ Insert product render or hardware photo as logo.png / manifold.jpg ]</span>
+            <p style="font-size: 1.05rem; color: var(--text-main);">
+                Amelia Hydro Dynamics is pioneering the next evolution in residential turf management. By translating heavy commercial agricultural precision into an accessible, automated residential framework, our patent-pending ecosystem delivers exact, zone-specific treatments seamlessly during normal irrigation cycles.
+            </p>
+
+            <!-- Hardware Render / Patent Sketch -->
+            <div class="product-image-container">
+                <img src="rendering.jpg" alt="Inline Injection Manifold Hardware" class="product-image" onerror="this.style.display='none';">
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Inline Injection Manifold — Patent-Pending Architecture</div>
             </div>
 
             <div class="hardware-details">
                 <div class="feature-item">
-                    <div class="feature-title">Hydraulic-Driven Precision Metering</div>
-                    <div style="color: var(--text-muted); font-size: 0.95rem;">Seamless fluid-powered operation that dynamically proportions treatments across complex residential layouts without sacrificing flow or pressure.</div>
+                    <div class="feature-title">Hydraulic-Driven Precision Fluid Metering</div>
+                    <div style="color: var(--text-muted);">Engineered fluid-powered architecture that dynamically proportions active treatments across complex multi-zone residential layouts without introducing pressure drops or flow restrictions.</div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-title">Smart-Locked Delivery Cartridges</div>
-                    <div style="color: var(--text-muted); font-size: 0.95rem;">Secure, pre-dosed media containers ensuring foolproof application accuracy, automated tracking, and clean, hands-free handling.</div>
+                    <div class="feature-title">Smart-Locked Pre-Dosed Cartridges</div>
+                    <div style="color: var(--text-muted);">Secure container integration ensuring foolproof application rates, automated tracking, and a completely closed-loop, clean handling experience for end users.</div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-title">Integrated Zone Management</div>
-                    <div style="color: var(--text-muted); font-size: 0.95rem;">Targeted application tailored to individual turf zones, optimizing plant health while completely eliminating chemical runoff.</div>
+                    <div class="feature-title">Advanced Zone-Specific Management</div>
+                    <div style="color: var(--text-muted);">Eliminates broadcast waste by targeting tailored agronomic formulations precisely where individual zones require them, maximizing efficiency while protecting local turf health.</div>
                 </div>
             </div>
         </div>
 
         <!-- Agronomy Consulting Section -->
         <div class="card">
-            <h2>Agronomy Consulting & IP</h2>
-            <p><strong>Professional Residential Advisory & Intellectual Property Development</strong></p>
-            <p>Specialized consultation for high-end residential turf ecosystems, focusing on advanced soil health optimization, micro-nutrient balancing, and sustainable property management strategies.</p>
+            <h2>Specialized Agronomy Consulting & Intellectual Property</h2>
+            <p style="font-size: 1.05rem; color: var(--text-main);">
+                Rooted in rigorous, independent agronomic insight, Amelia Hydro Dynamics provides high-end residential advisory and custom intellectual property development.
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: 0;">
+                Our advisory practice focuses on comprehensive soil health optimization, micro-nutrient and carbon balancing, and sustainable property management frameworks designed specifically for elite residential turf ecosystems.
+            </p>
         </div>
 
         <!-- Contact Section -->
         <div class="contact-section">
-            <h3 style="margin-top: 0; color: #ffffff;">Inquiries & Direct Contact</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">For licensing opportunities, strategic partnerships, or agronomy consulting:</p>
-            <a href="mailto:ameliahydrodynamics@gmail.com" class="btn">ameliahydrodynamics@gmail.com</a>
+            <h3 style="margin-top: 0; font-size: 1.4rem; color: #ffffff;">Strategic Inquiries & Direct Contact</h3>
+            <p style="color: var(--text-muted); margin-bottom: 15px;">
+                For licensing opportunities, strategic manufacturing partnerships, or specialized agronomy consulting:
+            </p>
+            <a href="mailto:william.hase@ameliahydrodynamics.com" class="btn">william.hase@ameliahydrodynamics.com</a>
         </div>
 
         <footer>
