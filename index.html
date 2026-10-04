@@ -8,7 +8,7 @@
         :root {
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --header-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            --header-bg: #0f172a;
             --border-color: #cbd5e1;
             --accent-blue: #1e3a8a;
             --accent-green: #16a34a;
@@ -25,12 +25,13 @@
             line-height: 1.6;
         }
 
-        /* Top Header matching business card styling */
+        /* Top Header matching business card styling with curved swoosh */
         .top-banner {
-            background: var(--header-bg);
+            background-color: var(--header-bg);
             color: #ffffff;
-            padding: 25px 20px 15px 20px;
-            border-bottom: 4px solid var(--accent-blue);
+            padding: 30px 20px 45px 20px;
+            position: relative;
+            overflow: hidden;
         }
 
         .banner-content {
@@ -41,6 +42,8 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
+            position: relative;
+            z-index: 2;
         }
 
         .company-meta h1 {
@@ -57,26 +60,48 @@
             letter-spacing: 1px;
         }
 
+        /* Business card style curved blue swoosh divider */
+        .swoosh-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 1;
+        }
+
+        .swoosh-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 35px;
+        }
+
+        .swoosh-container .shape-fill {
+            fill: #1e3a8a; /* Deep blue swoosh matching business card */
+        }
+
         .container {
             max-width: 950px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Large Prominent Logo Showcase */
+        /* Full-width logo container */
         .logo-container {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             background: #ffffff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
-            max-width: 450px; /* Substantially larger and fully legible */
             width: 100%;
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -137,7 +162,7 @@
             background: #f8fafc;
             padding: 18px;
             border-radius: 8px;
-            border-left: 3px solid var(--accent-blue);
+            border-left: 4px solid var(--accent-blue);
             border: 1px solid var(--border-color);
             border-left-width: 4px;
         }
@@ -185,7 +210,7 @@
 </head>
 <body>
 
-    <!-- Business-Card Styled Header Banner -->
+    <!-- Business-Card Styled Header Banner with Curved Blue Swoosh -->
     <div class="top-banner">
         <div class="banner-content">
             <div class="company-meta">
@@ -196,10 +221,16 @@
                 Residential Lawn Consulting & Field R&D
             </div>
         </div>
+        <!-- Curved Blue Swoosh SVG matching business card accent -->
+        <div class="swoosh-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,150.9,131.7,219.14,115.6,255.08,107.17,288.94,84.18,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </div>
 
     <div class="container">
-        <!-- Prominent Logo Display -->
+        <!-- Full-Width Logo Showcase -->
         <div class="logo-container">
             <img src="logo.png" alt="Amelia Hydro Dynamics Logo" class="logo" onerror="this.style.display='none'">
         </div>
