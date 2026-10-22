@@ -484,6 +484,15 @@
             Patent Pending • Working Name Only<br>
             &copy; 2026 Amelia Hydro Dynamics LLC. All rights reserved.
         </footer>
+        <script>
+  fetch("https://api.countapi.xyz/hit/ameliahydro-amelia-hydro-dynamics/visits")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Visitor count:", data.value);
+    })
+    .catch(error => {
+      console.error("Counter error:", error);
+    });
     </div>
 </body>
 </html>"""
