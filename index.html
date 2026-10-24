@@ -2,497 +2,291 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Amelia Hydro Dynamics | Full-Spectrum Residential Irrigation Treatment</title>
-    <style>
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --header-bg: #0f172a;
-            --border-color: #cbd5e1;
-            --accent-blue: #1e3a8a;
-            --accent-green: #16a34a;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .top-banner {
-            background-color: var(--header-bg);
-            color: #ffffff;
-            padding: 30px 20px 45px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .banner-content {
-            max-width: 950px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .company-meta h1 {
-            font-size: 1.5rem;
-            margin: 0 0 5px 0;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .company-meta p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #94a3b8;
-            letter-spacing: 1px;
-        }
-
-        .swoosh-container {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            z-index: 1;
-        }
-
-        .swoosh-container svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 35px;
-        }
-
-        .swoosh-container .shape-fill {
-            fill: #1e3a8a;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .logo-container {
-            text-align: center;
-            margin-bottom: 35px;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 35px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            margin-top: 0;
-            color: var(--accent-blue);
-        }
-
-        .badge {
-            background-color: rgba(22, 163, 74, 0.1);
-            color: var(--accent-green);
-            font-size: 0.75rem;
-            padding: 5px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(22, 163, 74, 0.3);
-            font-weight: 600;
-        }
-
-        .badge-upcoming {
-            background-color: rgba(30, 58, 138, 0.1);
-            color: var(--accent-blue);
-            font-size: 0.75rem;
-            padding: 5px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(30, 58, 138, 0.3);
-            font-weight: 600;
-        }
-
-        .timeline-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-
-        .timeline-box {
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .timeline-year {
-            font-weight: bold;
-            color: var(--accent-blue);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .water-sprayed {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-top: 8px;
-        }
-
-        .breakthrough-banner {
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
-            color: #ffffff;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .breakthrough-banner h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.35rem;
-            line-height: 1.4;
-        }
-
-        .product-image-container {
-            text-align: center;
-            margin: 25px 0;
-            background: #f1f5f9;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-        }
-
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-            display: block;
-            margin: 0 auto;
-        }
-
-        .spotlight-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: #ffffff;
-            color: var(--accent-blue);
-            border: 2px solid var(--accent-blue);
-            border-radius: 30px;
-            padding: 8px 18px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.75px;
-            box-shadow: 0 2px 8px rgba(30, 58, 138, 0.1);
-        }
-
-        .spotlight-badge svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--accent-green);
-            flex-shrink: 0;
-        }
-
-        .hardware-details {
-            margin-top: 25px;
-            display: grid;
-            gap: 18px;
-        }
-
-        .feature-item {
-            background: #f8fafc;
-            padding: 18px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-blue);
-        }
-
-        .feature-title {
-            font-weight: bold;
-            color: var(--accent-blue);
-            font-size: 1.05rem;
-            margin-bottom: 6px;
-        }
-
-        .contact-section {
-            text-align: center;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-blue);
-            color: #ffffff;
-            font-weight: bold;
-            padding: 14px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-size: 1.05rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 45px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-    </style>
+    <meta name="description" content="Amelia Hydro Dynamics - Residential lawn consulting & field R&D in Fernandina Beach, Florida. The first true smart system for residential irrigation treatment.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="top-banner">
-        <div class="banner-content">
-            <div class="company-meta">
-                <h1>Amelia Hydro Dynamics, LLC</h1>
-                <p>Fernandina Beach, Florida</p>
-            </div>
-            <div style="font-size: 0.95rem; color: #e2e8f0; font-weight: 500;">
-                Residential Lawn Consulting & Field R&D
-            </div>
-        </div>
-        <div class="swoosh-container">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,150.9,131.7,219.14,115.6,255.08,107.17,288.94,84.18,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
+    <!-- ambient background -->
+    <div class="bg" aria-hidden="true">
+        <div class="bg-gradient"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <svg class="bg-waves" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="rgba(37,99,235,0.06)" d="M0,192 C240,120 480,240 720,192 C960,144 1200,216 1440,160 L1440,320 L0,320 Z"/>
+            <path fill="rgba(8,145,178,0.05)" d="M0,256 C240,208 480,288 720,256 C960,224 1200,272 1440,240 L1440,320 L0,320 Z"/>
+        </svg>
     </div>
 
-    <div class="container">
-        <div class="logo-container">
-            <img src="logo.png" alt="Amelia Hydro Dynamics Logo" class="logo" onerror="this.style.display='none'">
+    <!-- nav -->
+    <header class="nav" id="nav">
+        <div class="nav-inner glass">
+            <a href="#top" class="nav-brand">
+                <img src="assets/icon-navy.png" alt="" class="nav-logo">
+                <span class="nav-name">Amelia Hydro Dynamics</span>
+            </a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <a href="#evolution">Evolution</a>
+                <a href="#system">The System</a>
+                <a href="#performance">Performance</a>
+                <a href="#consulting">Consulting</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </header>
 
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
-                <h2 style="margin: 0;">The Evolution of Residential Irrigation</h2>
-                <span class="badge">Defining True Smart Systems</span>
-            </div>
-            <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 20px;">
-                For decades, the industry focused purely on water management—scheduling timers, monitoring weather apps, and optimizing moisture. But a true residential smart system requires more than just managing water.
-            </p>
-            <div class="timeline-grid">
-                <div class="timeline-box">
-                    <div class="timeline-year">1950s – 1960s</div>
-                    <div>Residential irrigation systems began installs.</div>
-                    <div class="water-sprayed">The system sprayed water.</div>
+    <main id="top">
+
+        <!-- hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-meta">
+                    <span>Fernandina Beach, Florida</span>
+                    <span class="meta-dot" aria-hidden="true">&middot;</span>
+                    <span>Residential Lawn Consulting &amp; Field R&amp;D</span>
                 </div>
-                <div class="timeline-box">
-                    <div class="timeline-year">1970s – 1980s</div>
-                    <div>Residential zones were configured for more accurate watering cycles.</div>
-                    <div class="water-sprayed">The system sprayed water.</div>
-                </div>
-                <div class="timeline-box">
-                    <div class="timeline-year">2000s</div>
-                    <div>Smart controllers, weather monitoring, and soil moisture allowed for optimal water cycle management.</div>
-                    <div class="water-sprayed">The system sprayed water.</div>
-                </div>
-            </div>
-            <div class="breakthrough-banner">
-                <h3>No matter how much the equipment changed, the system only sprayed water. Until now.</h3>
-                <p style="margin: 0; font-size: 1.05rem; opacity: 0.95;">
-                    Introducing the first true smart system for residential homes: bringing professional-grade agronomy and full-spectrum turf treatment to the average homeowner, as simple as making a cup of coffee.
+                <h1 class="hero-title">The First True Smart System<br class="br-desktop"> for Residential Irrigation</h1>
+                <p class="hero-sub">
+                    <span>Professional grade agronomy and full spectrum turf treatment for the average homeowner</span>
+                    <span class="sub-divider" aria-hidden="true"></span>
+                    <span>as simple as making a cup of coffee.</span>
                 </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
-                <h2 style="margin: 0;">A Different Category</h2>
-                <span class="badge">Patent-Pending</span>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
-                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
-                    <strong>✗ Not</strong> an electronic dosing pump.
-                </div>
-                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
-                    <strong>✗ Not</strong> a Venturi system.
-                </div>
-                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
-                    <strong>✗ No</strong> open chemical handling.
+                <div class="hero-actions">
+                    <a href="#system" class="btn btn-primary">Explore the System</a>
+                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
                 </div>
             </div>
-            <p style="color: var(--text-muted); font-size: 1.05rem;">
-                A sealed, one-use, solid-state hydraulic cartridge system utilizing standard residential infrastructure downstream of a certified RPZ.
-            </p>
+        </section>
 
-            <div class="product-image-container">
-                <div class="spotlight-badge">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    As Featured in the Irrigation Association New Product Spotlight
+        <!-- evolution -->
+        <section class="section" id="evolution">
+            <div class="glass panel reveal">
+                <div class="panel-head">
+                    <h2>The Evolution of Residential Irrigation</h2>
+                    <span class="tag tag-green">Defining True Smart Systems</span>
+                </div>
+                <p class="lead">For decades, the industry focused purely on water management-scheduling timers, monitoring weather apps, and optimizing moisture. But a true residential smart system requires more than just managing water.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1950s - 1960s</div>
+                        <p>Residential irrigation systems began installs.</p>
+                        <p class="sprayed">The system sprayed water.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1970s - 1980s</div>
+                        <p>Residential zones were configured for more accurate watering cycles.</p>
+                        <p class="sprayed">The system sprayed water.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000s</div>
+                        <p>Smart controllers, weather monitoring, and soil moisture allowed for optimal water cycle management.</p>
+                        <p class="sprayed">The system sprayed water.</p>
+                    </div>
                 </div>
 
-                <img src="rendering.jpg" alt="Inline Injection Manifold Hardware" class="product-image" onerror="this.style.display='none'; document.getElementById('render-fallback').style.display='block';">
-                <div id="render-fallback" style="padding: 20px; color: var(--text-muted); display: none;">
-                    [ Please ensure your manifold drawing is uploaded to the repository root and named exactly <strong>rendering.jpg</strong> ]
-                </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Inline Injection Manifold — Patent-Pending Architecture</div>
-            </div>
-
-            <div class="hardware-details">
-                <div class="feature-item">
-                    <div class="feature-title">Pre-Dosed, Sealed Canister Architecture</div>
-                    <div style="color: var(--text-muted);">Eliminates open-air chemical pouring, measuring, and mixing, reducing liability and end-user exposure.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Zone-Specific Delivery (1-to-1 Mapping)</div>
-                    <div style="color: var(--text-muted);">Ensures precise application, prevents cross-contamination, and allows each zone to be treated individually and separately.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Microprocessor-Free Reliability</div>
-                    <div style="color: var(--text-muted);">Operates on a robust, solid-state electrical configuration controlled by authorized canister verification without fragile digital logic.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Continuous Bypass Integration</div>
-                    <div style="color: var(--text-muted);">Designed with a continuous open bypass highway to ensure zero measurable back-pressure on the main irrigation line.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Controlled Hydraulic Action</div>
-                    <div style="color: var(--text-muted);">Utilizes system water pressure to manage fluid delivery cleanly and predictably.</div>
+                <div class="breakthrough">
+                    <h3>No matter how much the equipment changed, the system only sprayed water. <em>Until now.</em></h3>
+                    <p>Introducing the first true smart system for residential homes: bringing professional-grade agronomy and full-spectrum turf treatment to the average homeowner, as simple as making a cup of coffee.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Advanced Performance, Safety & Family Protection</h2>
-            <div class="hardware-details">
-                <div class="feature-item">
-                    <div class="feature-title">Safety Shut-Offs & Automated Freshwater Flushing</div>
-                    <div style="color: var(--text-muted);">Equipped with automatic safety shut-offs on pressure drops, an ability to automatically bypass with a fresh water cycle, and dedicated canister flushing.</div>
+        <!-- system / different category -->
+        <section class="section" id="system">
+            <div class="glass panel reveal">
+                <div class="panel-head">
+                    <h2>A Different Category</h2>
+                    <span class="tag tag-green">Patent-Pending</span>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-title">Full-Spectrum Treatment Versatility</div>
-                    <div style="color: var(--text-muted);">Fully supports both foliar and drench applications for fungicides, herbicides, insecticides, fertilizers, and soil conditioners.</div>
+
+                <div class="neg-grid">
+                    <div class="neg"><strong>&#10007; Not</strong> an electronic dosing pump.</div>
+                    <div class="neg"><strong>&#10007; Not</strong> a Venturi system.</div>
+                    <div class="neg"><strong>&#10007; No</strong> open chemical handling.</div>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-title">Massive Waste Reduction (Up to 40%)</div>
-                    <div style="color: var(--text-muted);">Pinpoint targeting drastically cuts runoff and chemical waste compared to traditional broadcast methods.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Garage & Family Safety</div>
-                    <div style="color: var(--text-muted);">Completely eliminates chemical mixing, open measuring, granular storage, and messy bags on the garage floor where children or pets can access them.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Effortless Automated Timing</div>
-                    <div style="color: var(--text-muted);">Achieves optimal turf treatment timing without requiring homeowners to wake up early in the morning to manually manage applications.</div>
+
+                <p class="muted">A sealed, one-use, solid-state hydraulic cartridge system utilizing standard residential infrastructure downstream of a certified RPZ.</p>
+
+                <figure class="product glass-inset">
+                    <figcaption class="spotlight">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        As Featured in the Irrigation Association New Product Spotlight
+                    </figcaption>
+                    <img src="assets/rendering.jpg" alt="Inline Injection Manifold Hardware" class="product-img" loading="lazy">
+                    <div class="product-caption">Inline Injection Manifold - Patent-Pending Architecture</div>
+                </figure>
+
+                <div class="features">
+                    <div class="feature">
+                        <h3>Pre-Dosed, Sealed Canister Architecture</h3>
+                        <p>Eliminates open-air chemical pouring, measuring, and mixing, reducing liability and end-user exposure.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Zone-Specific Delivery (1-to-1 Mapping)</h3>
+                        <p>Ensures precise application, prevents cross-contamination, and allows each zone to be treated individually and separately.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Microprocessor-Free Reliability</h3>
+                        <p>Operates on a robust, solid-state electrical configuration controlled by authorized canister verification without fragile digital logic.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Continuous Bypass Integration</h3>
+                        <p>Designed with a continuous open bypass highway to ensure zero measurable back-pressure on the main irrigation line.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Controlled Hydraulic Action</h3>
+                        <p>Utilizes system water pressure to manage fluid delivery cleanly and predictably.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Commercial Partnerships & Access</h2>
-            <p style="color: var(--text-muted); margin-bottom: 0;">
-                Positioned for landscape supply distribution, irrigation contractors, and strategic licensing partners. Full technical packages, simulation data, and commercial terms are available under mutual NDA.
-            </p>
-        </div>
-
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
-                <h2>Residential Turf Consulting & Diagnostics</h2>
-                <span class="badge-upcoming">Launching March 2027</span>
+        <!-- performance -->
+        <section class="band" id="performance">
+            <div class="band-inner reveal">
+                <div class="band-grid">
+                    <div class="band-intro">
+                        <h2 class="band-title">Advanced Performance, Safety &amp; Family Protection</h2>
+                        <div class="bigstat">
+                            <span class="bigstat-num">40%</span>
+                            <div>
+                                <h3>Massive Waste Reduction</h3>
+                                <p>Pinpoint targeting drastically cuts runoff and chemical waste compared to traditional broadcast methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="band-list">
+                        <li class="band-row">
+                            <span class="band-num">01</span>
+                            <div>
+                                <h3>Safety Shut-Offs &amp; Automated Freshwater Flushing</h3>
+                                <p>Equipped with automatic safety shut-offs on pressure drops, an ability to automatically bypass with a fresh water cycle, and dedicated canister flushing.</p>
+                            </div>
+                        </li>
+                        <li class="band-row">
+                            <span class="band-num">02</span>
+                            <div>
+                                <h3>Full-Spectrum Treatment Versatility</h3>
+                                <p>Fully supports both foliar and drench applications for fungicides, herbicides, insecticides, fertilizers, and soil conditioners.</p>
+                            </div>
+                        </li>
+                        <li class="band-row">
+                            <span class="band-num">03</span>
+                            <div>
+                                <h3>Garage &amp; Family Safety</h3>
+                                <p>Completely eliminates chemical mixing, open measuring, granular storage, and messy bags on the garage floor where children or pets can access them.</p>
+                            </div>
+                        </li>
+                        <li class="band-row">
+                            <span class="band-num">04</span>
+                            <div>
+                                <h3>Effortless Automated Timing</h3>
+                                <p>Achieves optimal turf treatment timing without requiring homeowners to wake up early in the morning to manually manage applications.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
             </div>
-            <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 20px;">
-                Exceptional lawns shouldn't be reserved for golf courses or commercial estates. Rooted in rigorous agronomic insight and practical field research, Amelia Hydro Dynamics helps everyday homeowners achieve thriving, beautiful yards through a straightforward, science-backed approach.
-            </p>
-            <div class="hardware-details">
-                <div class="feature-item">
-                    <div class="feature-title">Systematic Diagnostic Approach</div>
-                    <div style="color: var(--text-muted);">Comprehensive property evaluations utilizing professional soil sampling, laboratory testing, irrigation evaluations, and mower assessments to uncover root causes of turf stress.</div>
+        </section>
+
+        <!-- consulting -->
+        <section class="grove" id="consulting">
+            <div class="grove-inner reveal">
+                <div class="grove-head">
+                    <h2>Residential Turf Consulting &amp; Diagnostics</h2>
+                    <span class="grove-launch">Launching March 2027</span>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-title">Soil Health as the Foundation</div>
-                    <div style="color: var(--text-muted);">Treating the soil as a living ecosystem, using targeted soil remediation strategies as the biological baseline to naturally bring a declining lawn back to life.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Tailored Recovery & Action Plans</div>
-                    <div style="color: var(--text-muted);">Delivering objective, step-by-grade diagnostic and recovery blueprints specific to the subject property without confusing industry jargon.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">HOA Advocacy & Mediation</div>
-                    <div style="color: var(--text-muted);">Assisting homeowners and property managers with navigating, understanding, and resolving complex HOA landscape requirements and compliance disputes.</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Education & Empowerment (No Treatments Applied)</div>
-                    <div style="color: var(--text-muted);">We do not apply treatments or sell products. Instead, we provide independent analysis, educate homeowners on how to recognize early turf stress, and empower you to take control of your yard with confidence.</div>
+                <p class="grove-lead">Exceptional lawns shouldn't be reserved for golf courses or commercial estates. Rooted in rigorous agronomic insight and practical field research, Amelia Hydro Dynamics helps everyday homeowners achieve thriving, beautiful yards through a straightforward, science-backed approach.</p>
+                <div class="grove-grid">
+                    <div class="grove-tile span-3">
+                        <span class="grove-num">01</span>
+                        <h3>Systematic Diagnostic Approach</h3>
+                        <p>Comprehensive property evaluations utilizing professional soil sampling, laboratory testing, irrigation evaluations, and mower assessments to uncover root causes of turf stress.</p>
+                    </div>
+                    <div class="grove-tile span-3">
+                        <span class="grove-num">02</span>
+                        <h3>Soil Health as the Foundation</h3>
+                        <p>Treating the soil as a living ecosystem, using targeted soil remediation strategies as the biological baseline to naturally bring a declining lawn back to life.</p>
+                    </div>
+                    <div class="grove-tile span-2">
+                        <span class="grove-num">03</span>
+                        <h3>Tailored Recovery &amp; Action Plans</h3>
+                        <p>Delivering objective, step-by-grade diagnostic and recovery blueprints specific to the subject property without confusing industry jargon.</p>
+                    </div>
+                    <div class="grove-tile span-2">
+                        <span class="grove-num">04</span>
+                        <h3>HOA Advocacy &amp; Mediation</h3>
+                        <p>Assisting homeowners and property managers with navigating, understanding, and resolving complex HOA landscape requirements and compliance disputes.</p>
+                    </div>
+                    <div class="grove-tile span-2">
+                        <span class="grove-num">05</span>
+                        <h3>Education &amp; Empowerment (No Treatments Applied)</h3>
+                        <p>We do not apply treatments or sell products. Instead, we provide independent analysis, educate homeowners on how to recognize early turf stress, and empower you to take control of your yard with confidence.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-section">
-            <h3 style="margin-top: 0; font-size: 1.4rem; color: var(--accent-blue);">Strategic Inquiries & Direct Contact</h3>
-            <p style="color: var(--text-muted); margin-bottom: 5px;">
-                <strong>William Hase</strong> | Managing Member
-            </p>
-            <p style="color: var(--text-muted); margin-bottom: 15px;">
-                Follow progress, updates, and videos on <a href="https://www.linkedin.com/in/william-hase-jr-7a521342b/" target="_blank" style="color: var(--accent-blue);">LinkedIn</a>.
-            </p>
-            <a href="mailto:william.hase@ameliahydrodynamics.com" class="btn">william.hase@ameliahydrodynamics.com</a>
-        </div>
+        <!-- partnerships -->
+        <section class="partner">
+            <div class="partner-inner reveal">
+                <div class="partner-head">
+                    <span class="partner-kicker">For Industry Partners</span>
+                    <h2>Commercial Partnerships &amp; Access</h2>
+                    <p class="partner-lead">Positioned for three channels of collaboration.</p>
+                </div>
+                <div class="partner-cols">
+                    <div class="partner-col">
+                        <span class="partner-col-num">I</span>
+                        <h3>Landscape Supply Distribution</h3>
+                        <p>Shelf-ready cartridge architecture built for supply-house and retail distribution channels.</p>
+                    </div>
+                    <div class="partner-col">
+                        <span class="partner-col-num">II</span>
+                        <h3>Irrigation Contractors</h3>
+                        <p>Drops into standard residential infrastructure downstream of a certified RPZ - no fragile digital logic to support.</p>
+                    </div>
+                    <div class="partner-col">
+                        <span class="partner-col-num">III</span>
+                        <h3>Strategic Licensing Partners</h3>
+                        <p>Patent-pending architecture available for licensing across turf, pest, and adjacent categories.</p>
+                    </div>
+                </div>
+                <p class="partner-nda">Full technical packages, simulation data, and commercial terms are available under mutual NDA.</p>
+            </div>
+        </section>
 
-        <footer>
-            Patent Pending • Working Name Only<br>
-            &copy; 2026 Amelia Hydro Dynamics LLC. All rights reserved.
-        </footer>
-        <script>
-  fetch("https://api.countapi.xyz/hit/ameliahydro-amelia-hydro-dynamics/visits")
-    .then(response => response.json())
-    .then(data => {
-      console.log("Visitor count:", data.value);
-    })
-    .catch(error => {
-      console.error("Counter error:", error);
-    });
-    </div>
+        <!-- contact -->
+        <section class="section" id="contact">
+            <div class="glass panel panel-narrow contact reveal">
+                <h2>Strategic Inquiries &amp; Direct Contact</h2>
+                <p class="contact-name"><strong>William Hase</strong> <span class="divider">|</span> Managing Member</p>
+                <p class="muted">Follow progress, updates, and videos on
+                    <a href="https://www.linkedin.com/in/william-hase-jr-7a521342b/" target="_blank" rel="noopener" class="link">LinkedIn</a>.
+                </p>
+                <a href="mailto:william.hase@ameliahydrodynamics.com" class="btn btn-primary btn-email">william.hase@ameliahydrodynamics.com</a>
+            </div>
+
+            <footer class="footer">
+                <p>Patent Pending • Working Name Only</p>
+                <p>&copy; 2026 Amelia Hydro Dynamics LLC. All rights reserved.</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
-</html>"""
+</html>
